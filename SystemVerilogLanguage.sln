@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemVerilogLanguage", "SystemVerilogLanguage\SystemVerilogLanguage.csproj", "{D58F8A56-1E6D-42CC-B11A-1EB46A0857B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemVerilogGrammar", "SystemVerilogParser\SystemVerilogGrammar.csproj", "{84A23241-8718-4742-8677-A6AEC5F9080C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemVerilogLanguage", "SystemVerilogLanguage\SystemVerilogLanguage.csproj", "{3C7B6439-57B1-44AB-AC4B-835A599192F0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{84A23241-8718-4742-8677-A6AEC5F9080C} = {84A23241-8718-4742-8677-A6AEC5F9080C}
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemVerilogParser", "SystemVerilogParser\SystemVerilogParser.csproj", "{84A23241-8718-4742-8677-A6AEC5F9080C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D58F8A56-1E6D-42CC-B11A-1EB46A0857B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D58F8A56-1E6D-42CC-B11A-1EB46A0857B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D58F8A56-1E6D-42CC-B11A-1EB46A0857B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D58F8A56-1E6D-42CC-B11A-1EB46A0857B1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{84A23241-8718-4742-8677-A6AEC5F9080C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84A23241-8718-4742-8677-A6AEC5F9080C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84A23241-8718-4742-8677-A6AEC5F9080C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84A23241-8718-4742-8677-A6AEC5F9080C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7B6439-57B1-44AB-AC4B-835A599192F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7B6439-57B1-44AB-AC4B-835A599192F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7B6439-57B1-44AB-AC4B-835A599192F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7B6439-57B1-44AB-AC4B-835A599192F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

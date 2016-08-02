@@ -52,7 +52,7 @@
   <ItemGroup>
     <Antlr4 Include="SystemVerilog2012.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>RootNamespace.Folder</CustomToolNamespace>
+      <CustomToolNamespace>SystemVerilogLanguage.Classification.Antlr</CustomToolNamespace>
     </Antlr4>
   </ItemGroup>
   <ItemGroup>

@@ -1,3 +1,5 @@
+// This grammar was converted from the IEEE 1800-2012 LRM specification (Annex A) to an ANTLR4-style EBNF
+// https://standards.ieee.org/getieee/1800/download/1800-2012.pdf
 
 grammar SystemVerilog2012;
 
