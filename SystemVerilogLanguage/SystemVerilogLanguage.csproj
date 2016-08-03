@@ -45,22 +45,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\SystemVerilogParser\obj\Debug\SystemVerilogBaseListener.cs">
+    <Compile Include="..\SystemVerilogGrammar\obj\Debug\SystemVerilogBaseListener.cs">
       <Link>SystemVerilogBaseListener.cs</Link>
     </Compile>
-    <Compile Include="..\SystemVerilogParser\obj\Debug\SystemVerilogBaseVisitor.cs">
+    <Compile Include="..\SystemVerilogGrammar\obj\Debug\SystemVerilogBaseVisitor.cs">
       <Link>SystemVerilogBaseVisitor.cs</Link>
     </Compile>
-    <Compile Include="..\SystemVerilogParser\obj\Debug\SystemVerilogLexer.cs">
+    <Compile Include="..\SystemVerilogGrammar\obj\Debug\SystemVerilogLexer.cs">
       <Link>SystemVerilogLexer.cs</Link>
     </Compile>
-    <Compile Include="..\SystemVerilogParser\obj\Debug\SystemVerilogListener.cs">
+    <Compile Include="..\SystemVerilogGrammar\obj\Debug\SystemVerilogListener.cs">
       <Link>SystemVerilogListener.cs</Link>
     </Compile>
-    <Compile Include="..\SystemVerilogParser\obj\Debug\SystemVerilogParser.cs">
+    <Compile Include="..\SystemVerilogGrammar\obj\Debug\SystemVerilogParser.cs">
       <Link>SystemVerilogParser.cs</Link>
     </Compile>
-    <Compile Include="..\SystemVerilogParser\obj\Debug\SystemVerilogVisitor.cs">
+    <Compile Include="..\SystemVerilogGrammar\obj\Debug\SystemVerilogVisitor.cs">
       <Link>SystemVerilogVisitor.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
