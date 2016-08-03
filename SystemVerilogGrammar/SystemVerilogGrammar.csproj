@@ -50,9 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Antlr4 Include="SystemVerilog2012.g4">
+    <Antlr4 Include="SystemVerilog.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>SystemVerilogLanguage.Classification.Antlr</CustomToolNamespace>
+      <CustomToolNamespace>SystemVerilogLanguage</CustomToolNamespace>
     </Antlr4>
   </ItemGroup>
   <ItemGroup>

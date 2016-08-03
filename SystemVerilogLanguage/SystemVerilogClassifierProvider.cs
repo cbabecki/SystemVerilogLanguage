@@ -23,7 +23,9 @@ namespace SystemVerilogLanguage
         /// to the custom classification type later.
         /// </summary>
         [Import]
+        # pragma warning disable 649
         private IClassificationTypeRegistryService classificationRegistry;
+        # pragma warning restore 649
 
         #region IClassifierProvider
 

@@ -5,9 +5,12 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
+using Antlr4.Runtime;
+using Antlr4.Runtime.Tree;
 
 namespace SystemVerilogLanguage
 {
@@ -17,9 +20,9 @@ namespace SystemVerilogLanguage
     internal class SystemVerilogClassifier : IClassifier
     {
         /// <summary>
-        /// Classification type.
+        /// Classification type registry.
         /// </summary>
-        private readonly IClassificationType classificationType;
+        private IClassificationTypeRegistryService typeRegistry;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemVerilogClassifier"/> class.
@@ -27,7 +30,7 @@ namespace SystemVerilogLanguage
         /// <param name="registry">Classification registry.</param>
         internal SystemVerilogClassifier(IClassificationTypeRegistryService registry)
         {
-            this.classificationType = registry.GetClassificationType("SystemVerilogClassification");
+            this.typeRegistry = registry;
         }
 
         #region IClassifier
@@ -40,7 +43,9 @@ namespace SystemVerilogLanguage
         /// for example typing /* would cause the classification to change in C# without directly
         /// affecting the span.
         /// </remarks>
+        # pragma warning disable 67
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
+        # pragma warning restore 67
 
         /// <summary>
         /// Gets all the <see cref="ClassificationSpan"/> objects that intersect with the given range of text.
@@ -53,12 +58,17 @@ namespace SystemVerilogLanguage
         /// <returns>A list of ClassificationSpans that represent spans identified to be of this classification.</returns>
         public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
         {
-            var result = new List<ClassificationSpan>()
-            {
-                new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(span.Start, span.Length)), this.classificationType)
-            };
+            Debug.WriteLine(String.Format("Parsing: {0}", span.GetText()));
+            var lexer  = new SystemVerilogLexer(new AntlrInputStream(span.GetText()));
+            var tokens = new CommonTokenStream(lexer);
+            var parser = new SystemVerilogParser(tokens);
 
-            return result;
+            // Walk it and attach our listener
+            var walker   = new ParseTreeWalker();
+            var listener = new SystemVerilogClassifierListener(typeRegistry, span);
+            walker.Walk(listener, parser.source_text());
+
+            return listener.spanList;
         }
 
         #endregion
