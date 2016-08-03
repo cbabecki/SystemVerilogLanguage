@@ -13,7 +13,7 @@ namespace SystemVerilogLanguage
     /// <summary>
     /// Classification type definition exports for SystemVerilogClassifier
     /// </summary>
-    internal static class SystemVerilogClassifierClassificationDefinition
+    internal static class SystemVerilogClassificationDefinitions
     {
         #region Content Type and File Extension Definitions
 
@@ -47,10 +47,13 @@ namespace SystemVerilogLanguage
         #region Classification Type Definitions
 
         [Export]
-        [Name("SystemVerilogClassification")]
-        internal static ClassificationTypeDefinition systemVerilogClassificationDefinition = null;
+        [Name("SystemVerilog.Keyword")]
+        internal static ClassificationTypeDefinition systemVerilogKeywordDefinition = null;
+
+        [Export]
+        [Name("SystemVerilog.Identifier")]
+        internal static ClassificationTypeDefinition systemVerilogIdentifierDefinition = null;
 
         #endregion
-
     }
 }
